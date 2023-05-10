@@ -1,0 +1,181 @@
+JFDML JFormDesigner: "7.0.5.0.404" Java: "14.0.2" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:38:p, par l {comp jLabel4::l:p:163:p, par t:l::p {seq l {par l {comp jScrollPane4:::p:313:p, comp jLabel2:::p:298:p}, space :p:41:p, par l {seq {comp title_label:::p:360:p, space :::x, comp log_out_btn:::p::p}, comp jLabel1:::p:298:p, seq l {comp create_type_opt:::p:177:p, space s:::p, comp type_in:::p:125:p, space s:::p, comp create_btn:::p::p, space s:::p, comp display_btn:::p::p}}}, seq l {comp calendarPanel2:::p:297:p, space :p:57:p, comp jScrollPane1:::p:774:p}}}, space :0:42:x}}"
+			"$verticalGroup": "par l {seq t {space :p:35:p, par b {comp title_label::b:p:21:p, comp log_out_btn::b:p::p}, space :p:12:p, comp jLabel4:::p::p, space :::p, par l {comp jScrollPane4::l:p:101:p, par b:l {comp create_type_opt::b:p::p, comp type_in::b:p::p, comp create_btn::b:p::p, comp display_btn::b:p::p}}, space s:::p, par l {comp jLabel1:::p::p, comp jLabel2:::p::p}, space ::25:x, par l {comp calendarPanel2:::p:224:p, comp jScrollPane1:::p:215:p}, space :p:25:p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"title": "Calendar App"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "create_btn"
+				"text": "Create"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "create_btnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "type_in"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Task"
+					addElement( "Task" )
+					addElement( "Meeting" )
+				}
+				auxiliary() {
+					"JavaCodeGenerator.typeParameters": "String"
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "create_type_opt"
+				"font": new java.awt.Font( "Segoe UI Historic", 3, 18 )
+				"text": "Please select a type"
+				"foreground": new java.awt.Color( 0, 153, 153, 255 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel1"
+				"font": &Font0 new java.awt.Font( "Yu Gothic UI Semibold", 3, 18 )
+				"foreground": &Color0 new java.awt.Color( 0, 153, 153, 255 )
+				"text": "Notifications (Read only)"
+			} )
+			add( new FormComponent( "com.github.lgooddatepicker.components.CalendarPanel" ) {
+				name: "calendarPanel2"
+				addEvent( new FormEvent( "java.beans.PropertyChangeListener", "propertyChange", "calendarPanel2PropertyChange", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "msg_table"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "Title 1" )
+						add( "Title 2" )
+						add( "Title 3" )
+						add( "Title 4" )
+					}, new java.util.Vector {
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+					}, new java.util.Vector {
+						add( true )
+						add( true )
+						add( true )
+						add( true )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "log_out_btn"
+				"text": "LogOut"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "logOutBtnMouseClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel4"
+				"font": new java.awt.Font( "Segoe UI Historic", 3, 18 )
+				"foreground": new java.awt.Color( 0, 153, 153, 255 )
+				"text": "Today's Statistics"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane4"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "stat_table"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "Title 1" )
+						add( "Title 2" )
+						add( "Title 3" )
+						add( "Title 4" )
+					}, new java.util.Vector {
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+					}, new java.util.Vector {
+						add( true )
+						add( true )
+						add( true )
+						add( true )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "title_label"
+				"font": new java.awt.Font( "Segoe UI Historic", 3, 24 )
+				"text": "Calendar"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "display_btn"
+				"text": "Display Tasks/Meetings"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "create_btnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel2"
+				"font": #Font0
+				"foreground": #Color0
+				"text": "Select a date from the calendar"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 1210, 555 )
+			"location": new java.awt.Point( 15, 0 )
+		} )
+	}
+}

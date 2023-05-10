@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="library">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/library/ojdbc5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/LGoodDatePicker-11.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/jcommon-1.0.23.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

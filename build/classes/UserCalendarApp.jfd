@@ -1,0 +1,245 @@
+JFDML JFormDesigner: "7.0.5.0.404" Java: "14.0.2" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {par l {seq t {comp jScrollPane4:::p:313:p, space :p:35:p}, seq {par l {seq l {space :p:31:p, par l {seq {par t:::p {seq {comp edit_del_label:::p:159:p, space :::x, comp edit_btn:::p:67:p}, seq {comp create_type_opt:::p:125:p, space s:::p, comp type_in:::p:125:p}}, space :p::p, par l {comp create_btn:::p::p, comp delete_btn:::p:67:p}}, comp calendarPanel2:::p:297:p}}, seq l {space :p:108:p, comp jLabel4:::p:163:p}}, space :p:21:p}}, par t {comp jLabel2::l:p:132:p, par t:l::p {seq l {comp jLabel1:::p:298:p, space :::x, comp log_out_btn:::p::p}, comp jScrollPane2::l::774:x, comp jScrollPane1::l::774:x}}, space :0:11:x}, seq l {space :p:370:p, comp title_label:::p:342:p, space ::466:x}}"
+			"$verticalGroup": "par l {seq t {space :p:42:p, comp title_label:::p:16:p, space :p:16:p, par l {seq {comp calendarPanel2:::p:224:p, space :p:24:p, par b {comp type_in::b:p::p, comp create_btn::b:p::p, comp create_type_opt::b:p::p}}, seq {par b {comp jLabel1::b:p::p, comp log_out_btn::b:p::p}, space s:::p, comp jScrollPane1::::0:x}}, space :::x, par l {par b {comp edit_del_label::b:p:22:p, comp delete_btn::b:p::p, comp edit_btn::b:p::p}, seq l {space :p:4:p, comp jLabel2:::p::p}}, par l {seq {space :p:37:p, comp jLabel4:::p::p, space :::p, comp jScrollPane4:::p:101:p}, seq l {space s:::p, comp jScrollPane2:::p:190:p}}, space ::12:x}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"title": "User Calendar App"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "create_btn"
+				"text": "Create"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "create_btnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "edit_btn"
+				"text": "Edit"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "edit_btnMouseClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "delete_btn"
+				"text": "Delete"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "delete_btnMouseClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "type_in"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Task"
+					addElement( "Task" )
+					addElement( "Meeting" )
+				}
+				auxiliary() {
+					"JavaCodeGenerator.typeParameters": "String"
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "create_type_opt"
+				"font": new java.awt.Font( "Segoe UI Semibold", 2, 12 )
+				"text": "Please select a type"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "edit_del_label"
+				"font": new java.awt.Font( "Segoe UI Semibold", 2, 12 )
+				"text": "Select a row to edit or delete"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel1"
+				"font": new java.awt.Font( "Yu Gothic UI Semibold", 3, 14 )
+				"foreground": new java.awt.Color( 0, 153, 153, 255 )
+				"text": "Notifications (Read only)"
+			} )
+			add( new FormComponent( "com.github.lgooddatepicker.components.CalendarPanel" ) {
+				name: "calendarPanel2"
+				addEvent( new FormEvent( "java.beans.PropertyChangeListener", "propertyChange", "calendarPanel2PropertyChange", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane2"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "result_table"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "Title 1" )
+						add( "Title 2" )
+						add( "Title 3" )
+						add( "Title 4" )
+					}, new java.util.Vector {
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+					}, new java.util.Vector {
+						add( true )
+						add( true )
+						add( true )
+						add( true )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+					"selectionMode": 2
+					"showHorizontalLines": false
+					"showVerticalLines": false
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "msg_table"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "Title 1" )
+						add( "Title 2" )
+						add( "Title 3" )
+						add( "Title 4" )
+					}, new java.util.Vector {
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+					}, new java.util.Vector {
+						add( true )
+						add( true )
+						add( true )
+						add( true )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel2"
+				"font": new java.awt.Font( "Segoe UI Semibold", 3, 14 )
+				"foreground": new java.awt.Color( 0, 153, 153, 255 )
+				"text": "Tasks && Meetings"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "log_out_btn"
+				"text": "LogOut"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "log_out_btnMouseClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel4"
+				"font": new java.awt.Font( "Segoe UI", 3, 14 )
+				"foreground": new java.awt.Color( 0, 153, 153, 255 )
+				"text": "Today's Statistics"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane4"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "stat_table"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "Title 1" )
+						add( "Title 2" )
+						add( "Title 3" )
+						add( "Title 4" )
+					}, new java.util.Vector {
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
+					}, new java.util.Vector {
+						add( true )
+						add( true )
+						add( true )
+						add( true )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "title_label"
+				"font": new java.awt.Font( "Segoe UI", 3, 18 )
+				"text": "Personal Calendar"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 1180, 625 )
+			"location": new java.awt.Point( 5, 0 )
+		} )
+	}
+}
